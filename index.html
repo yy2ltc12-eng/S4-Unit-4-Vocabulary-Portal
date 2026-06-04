@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form 4 English Thematic Vocabulary Master Portal</title>
+    <title>Form 4 English Thematic Vocabulary Master Portal - Unit 4</title>
     <style>
         :root {
             --primary: #6c5ce7;
@@ -305,188 +305,178 @@
     </div>
 
     <script>
-        // --- GOOGLE SPREADSHEET CONFIGURATION ENDPOINT ---
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTQsI15oqFEXpwa0pU3f_v65dzcijNeHfek8FHM2HlDcdwqQSsio-xf4SIgY8YdbwO/exec";
 
-        // Verified Complete Lexicon Matrix derived from "Thematic_Vocabulary_Popular_Culture_S4.xlsx"
+        // Unit 4 Popular Culture Vocabulary Database derived from Popular_Culture_Vocabulary_Exercises.xlsx
         const fullForm4VocabularyDatabase = {
             4: [
-                // Q1
-                { word: "aesthetic", chinese: "美學/審美觀", cat: "Art", sent: "The director's unique modern visual style highlights a dark and moody _____." },
-                { word: "creative", chinese: "有創造力的", cat: "Art", sent: "Brainstorming alternative project settings requires highly _____ conceptual planning skills." },
-                { word: "expression", chinese: "表達", cat: "Art", sent: "Writing music can serve as a wonderful medium for the genuine _____ of personal emotions." },
-                { word: "humour", chinese: "幽默", cat: "Art", sent: "The screenwriter added a great deal of witty _____ to make the classic romcom dialogue fun." },
-                { word: "imagination", chinese: "想像力/幻想", cat: "Art", sent: "Sci-fi films require a great deal of creative _____ to visualize alien worlds convincingly." },
-                { word: "individual", chinese: "個人的/獨特的", cat: "Art", sent: "Every fashion designer wants to establish a highly distinctive and _____ stylistic signature." },
-                { word: "advertisement", chinese: "廣告", cat: "Business and Marketing", sent: "A brief commercial _____ was broadcast across social media networks to boost ticket bookings." },
+                // Quiz 1 Words (1-10)
+                { word: "aesthetic", chinese: "美學/審美觀", cat: "Art", sent: "The gallery's minimalist design emphasizes a clean, modern _____." },
+                { word: "creative", chinese: "有創造力的", cat: "Art", sent: "An animator must be highly _____ to create completely new fantasy worlds." },
+                { word: "expression", chinese: "表達", cat: "Art", sent: "Artistic _____ allows individuals to display deep feelings without words." },
+                { word: "humour", chinese: "幽默", cat: "Art", sent: "A good romantic comedy relies heavily on witty dialogue and light-hearted _____." },
+                { word: "imagination", chinese: "想像力/幻想", cat: "Art", sent: "Reading books stimulates a child's _____ far more than television does." },
+                { word: "individual", chinese: "個人的/獨特的", cat: "Art", sent: "Every _____ artist has a unique approach that redefines their artistic genre." },
+                { word: "advertisement", chinese: "廣告", cat: "Business and Marketing", sent: "A catchy digital _____ can quickly go viral on major social networks." },
                 { word: "advertising", chinese: "投放廣告的行為/廣告業", cat: "Business and Marketing", sent: "Following a series of negative news reports, the CEO believed a change in _____ strategy would repair their brand image." },
-                { word: "cash in", chinese: "從...中獲利", cat: "Business and Marketing", sent: "Many studios try to _____ on an original film's unexpected triumph by rushedly production sequels." },
-                { word: "commercial", chinese: "商業的", cat: "Business and Marketing", sent: "While the indie production was an artistic triumph, its overall _____ prospects remain low." },
-                
-                // Q2
-                { word: "consumer", chinese: "消費者", cat: "Business and Marketing", sent: "Modern _____ data indicates that fast fashion products dominate the junior demographic market." },
-                { word: "customer", chinese: "顧客", cat: "Business and Marketing", sent: "To maintain strong _____ loyalty, the streaming service offers special promotional discounts." },
-                { word: "domestically", chinese: "本地", cat: "Business and Marketing", sent: "The animated movie performed excellently _____, though it received mixed feedback internationally." },
-                { word: "entertainment industry", chinese: "娛樂行業", cat: "Business and Marketing", sent: "Dedicating her whole life to the _____ required immense sacrifice but brought her global fame." },
-                { word: "gross", chinese: "賺/獲得...毛利", cat: "Business and Marketing", sent: "The seasonal superhero blockbuster is expected to _____ over three hundred million dollars." },
-                { word: "money-spinner", chinese: "賺錢的東西", cat: "Business and Marketing", sent: "The author's latest work, titled Incredible Me, proved to be a real _____ selling millions of copies." },
+                { word: "cash in", chinese: "從...中獲利", cat: "Business and Marketing", sent: "Production studios always try to _____ on a blockbuster film by manufacturing limited edition toys." },
+                { word: "commercial", chinese: "商業的", cat: "Business and Marketing", sent: "While the movie achieved massive _____ success, it received poor reviews from film critics." },
+
+                // Quiz 2 Words (11-20)
+                { word: "consumer", chinese: "消費者", cat: "Business and Marketing", sent: "Modern _____ expect high-quality streaming services at an affordable subscription fee." },
+                { word: "customer", chinese: "顧客", cat: "Business and Marketing", sent: "Providing special offers is an excellent marketing strategy to attract a new _____ base." },
+                { word: "domestically", chinese: "本地", cat: "Business and Marketing", sent: "The indie film performed well _____ but struggled to capture a global audience." },
+                { word: "entertainment industry", chinese: "娛樂行業", cat: "Business and Marketing", sent: "The digital revolution has completely transformed the global _____ over the past decade." },
+                { word: "gross", chinese: "賺/獲得...毛利", cat: "Business and Marketing", sent: "The upcoming Marvel instalment is expected to _____ over one billion dollars worldwide." },
+                { word: "money-spinner", chinese: "賺錢的東西", cat: "Business and Marketing", sent: "The author's latest work, titled Incredible Me, received a high rating and proved to be a real _____ selling over three million copies in just a week." },
                 { word: "profitable", chinese: "有盈利的/獲利的", cat: "Business and Marketing", sent: "The company decided not to produce another episode of the Y-Men series as it was deemed not _____ enough." },
-                { word: "promotion", chinese: "宣傳", cat: "Business and Marketing", sent: "The lead actors traveled across Hollywood for the worldwide _____ of their upcoming adaptation." },
-                { word: "showbiz", chinese: "娛樂圈", cat: "Business and Marketing", sent: "Dedicating her whole life to _____, the late actress received many awards and nominations." },
-                { word: "social media", chinese: "社交媒體", cat: "Business and Marketing", sent: "Thanks to big data analytics, _____ sites such as Instagram and Threads have become ideal platforms for companies." },
-                
-                // Q3
-                { word: "special offer", chinese: "特別優惠", cat: "Business and Marketing", sent: "The theatre launched a limited _____ where students could purchase weekend matinee tickets half off." },
-                { word: "sponsor", chinese: "贊助者", cat: "Business and Marketing", sent: "A major athletic apparel firm agreed to act as the primary corporate _____ for the show." },
-                { word: "word of mouth", chinese: "口碑", cat: "Business and Marketing", sent: "Without a large advertising budget, the low-budget mystery thriller relies entirely on positive _____." },
-                { word: "celebrity", chinese: "名人", cat: "Celebrity", sent: "The young fashionista was ecstatic to spot a famous Hollywood _____ sitting across the fashion show." },
-                { word: "idol", chinese: "偶像", cat: "Celebrity", sent: "Teenagers often copy the hairdo and wardrobe selections of their favorite pop music _____." },
-                { word: "role model", chinese: "模範/榜樣", cat: "Celebrity", sent: "As an influential figure, the studio expects the top actor to be a positive _____ for youth." },
-                { word: "stardom", chinese: "明星地位/身分", cat: "Celebrity", sent: "The overnight success of the musical adaptation launched the young animator into global _____." },
-                { word: "counterfeit", chinese: "偽造的", cat: "Fashion", sent: "The market was flooded with _____ handbags that looked almost the same as the genuine one." },
-                { word: "fashion show", chinese: "時裝展覽會", cat: "Fashion", sent: "Top models from around the world gathered in Milan to showcase the autumn trends at the grand _____." },
+                { word: "promotion", chinese: "宣傳", cat: "Business and Marketing", sent: "The studio launched a massive social media campaign for the _____ of their brand new reality show." },
+                { word: "showbiz", chinese: "娛樂圈", cat: "Business and Marketing", sent: "Dedicating her whole life to _____ the late actress received many awards and nominations for her magnificent performances on stage and screen." },
+                { word: "social media", chinese: "社交媒體", cat: "Business and Marketing", sent: "Thanks to big data analytics, _____ sites such as Instagram and Threads have become ideal platforms for companies to reach their target audience." },
+
+                // Quiz 3 Words (21-30)
+                { word: "special offer", chinese: "特別優惠", cat: "Business and Marketing", sent: "Subscribers who renew their account this week will enjoy a _____ of three months free." },
+                { word: "sponsor", chinese: "贊助者", cat: "Business and Marketing", sent: "A major athletic wear corporation stepped in as the main _____ for the beauty contest." },
+                { word: "word of mouth", chinese: "口碑", cat: "Business and Marketing", sent: "Without a big budget for advertising, the low-budget film relied entirely on positive _____." },
+                { word: "celebrity", chinese: "名人", cat: "Celebrity", sent: "A high-profile Hollywood _____ was spotted attending the grand opening of the fashion show." },
+                { word: "idol", chinese: "偶像", cat: "Celebrity", sent: "Many loyal fans treat this talented K-pop singer as their ultimate teenage _____." },
+                { word: "role model", chinese: "模範/榜樣", cat: "Celebrity", sent: "Famous people should act responsibly since they frequently serve as a _____ for young adults." },
+                { word: "stardom", chinese: "明星地位/身分", cat: "Celebrity", sent: "Her rapid rise to international _____ began after she starred in a critically acclaimed musical." },
+                { word: "counterfeit", chinese: "偽造的", cat: "Fashion", sent: "The market was flooded with _____ handbags that looked almost the same as the genuine one the Hollywood actress was carrying." },
+                { word: "fashion show", chinese: "時裝展覽會", cat: "Fashion", sent: "Top international models gathered in Paris to showcase stylish outfits at the seasonal _____." },
                 { word: "fashionable", chinese: "流行的", cat: "Fashion", sent: "Baggy jeans were seen as _____ in the 90s, but recent changes in beauty standards have led to its declining popularity." },
-                
-                // Q4
-                { word: "fashionista", chinese: "時尚達人", cat: "Fashion", sent: "Being an obsessed _____, she never misses an instalment of the latest lifestyle magazine." },
-                { word: "fast fashion", chinese: "快速時尚", cat: "Fashion", sent: "A notable impact of _____ is that millions of tonnes of clothes worn just once end up in the landfill." },
-                { word: "hairdo", chinese: "髮型", cat: "Fashion", sent: "The lead singer's radical new _____ inspired a brand new beauty craze among digital natives." },
-                { word: "limited edition", chinese: "限量版", cat: "Fashion", sent: "_____ items are a perfect example of how producers make use of economics and psychology to maximize profit." },
-                { word: "make-up", chinese: "化妝", cat: "Fashion", sent: "Special effects artists spend several hours applying complex prosthetic _____ to the villain." },
+
+                // Quiz 4 Words (31-40)
+                { word: "fashionista", chinese: "時尚達人", cat: "Fashion", sent: "The trendy magazine features weekly outfit tips curated by a well-known local _____." },
+                { word: "fast fashion", chinese: "快速時尚", cat: "Fashion", sent: "A notable impact of _____ is that millions of tonnes of clothes probably worn just once end up in the landfill." },
+                { word: "hairdo", chinese: "髮型", cat: "Fashion", sent: "The pop star debuted a radical new _____ at the live entertainment music awards." },
+                { word: "limited edition", chinese: "限量版", cat: "Fashion", sent: "_____ items are a perfect example of how producers make use of economics and psychology to maximize profits." },
+                { word: "make-up", chinese: "化妝", cat: "Fashion", sent: "The actors spent three hours in the studio getting their special effects _____ applied." },
                 { word: "outfit", chinese: "全套服裝", cat: "Fashion", sent: "At the costume party, Tommy's tailored Iron Man _____ was the centre of attention." },
-                { word: "stylish", chinese: "時尚的", cat: "Fashion", sent: "The main character looked incredibly _____ when she appeared in that minimalist outfit." },
-                { word: "Academy Award", chinese: "奧斯卡金像獎", cat: "Film and Television", sent: "Winning an _____ is considered the highest possible peak of triumph for any Hollywood director." },
+                { word: "stylish", chinese: "時尚的", cat: "Fashion", sent: "The main character looked incredibly _____ walking through Hollywood in her designer sunglasses." },
+                { word: "Academy Award", chinese: "奧斯卡金像獎", cat: "Film and Television", sent: "Winning a prestigious _____ is considered the highest achievement for a film director." },
                 { word: "adaptation", chinese: "改編", cat: "Film and Television", sent: "A challenge or opportunity of film _____ is the addition of sound and music to immerse the audience." },
                 { word: "aerial shot", chinese: "空中拍攝", cat: "Film and Television", sent: "This film embraces the latest filming technologies, featuring breathtaking _____ captured by drones." },
-                
-                // Q5
-                { word: "Alien", chinese: "異形(科幻恐怖片系列)", cat: "Film and Television", sent: "The legendary director pioneered new approaches to sci-fi horror when he released the original _____ movie." },
-                { word: "animation", chinese: "動畫", cat: "Film and Television", sent: "The local studio specializes in creating high-quality digital _____ for children's television series." },
-                { word: "animator", chinese: "動畫師", cat: "Film and Television", sent: "The talented Japanese _____ worked tirelessly to draw the intricate visual frames for the new production." },
-                { word: "anime", chinese: "日本動畫", cat: "Film and Television", sent: "Studio Ghibli is globally acclaimed for producing some of the most captivating _____ in history." },
-                { word: "attendance", chinese: "出席人數", cat: "Film and Television", sent: "The cinema recorded poor opening weekend _____ due to the overlapping reality show finale." },
-                { word: "audience", chinese: "觀眾", cat: "Film and Television", sent: "Shared experience creates a strong emotional connection between the _____ and the show." },
-                { word: "beauty contest", chinese: "選美比賽", cat: "Film and Television", sent: "Winning the national _____ gave her an easy entry path into the competitive entertainment industry." },
-                { word: "binge-watch", chinese: "持續地追看影集", cat: "Film and Television", sent: "With streaming services dropping whole seasons at once, it is easy to _____ an entire series in a weekend." },
-                { word: "blockbuster", chinese: "暢銷巨著/流行大片", cat: "Film and Television", sent: "The studio's latest sci-fi release is expected to be one of the highest-grossing _____ in history." },
-                { word: "box office", chinese: "票房", cat: "Film and Television", sent: "Despite receiving terrible verdicts from critics, the action movie was a massive _____ hit." },
-                
-                // Q6
-                { word: "cartoon", chinese: "卡通", cat: "Film and Television", sent: "Many children enjoy watching a light-hearted _____ on Saturday mornings before doing school review tasks." },
-                { word: "CGI", chinese: "電腦圖形影像處理", cat: "Film and Television", sent: "Modern blockbusters rely heavily on advanced _____ to render realistic prehistoric monsters like Godzilla." },
-                { word: "characterization", chinese: "角色刻畫/人物塑造", cat: "Film and Television", sent: "Critics praised the drama's deep _____, noting that even the villain felt complex and human." },
-                { word: "cinema", chinese: "電影院", cat: "Film and Television", sent: "Watching a widescreen spectacle in a crowded _____ offers a superior sensory experience." },
-                { word: "cinephile", chinese: "電影狂熱者", cat: "Film and Television", sent: "As an absolute _____, Peter maintains an extensive physical record database of vintage western films." },
-                { word: "classic", chinese: "經典", cat: "Film and Television", sent: "Producers began to explore other _____ film series in the hope of repeating its success." },
-                { word: "cliffhanger", chinese: "懸念式結尾", cat: "Film and Television", sent: "The film ends with a _____ and viewers can only know what happens in its sequel." },
-                { word: "crossover", chinese: "跨界作品", cat: "Film and Television", sent: "Fans were ecstatic when Marvel announced a spectacular comic book _____ featuring multiple superheroes." },
-                { word: "digital", chinese: "數位的", cat: "Film and Television", sent: "The rapid transition from analog film reels to _____ projection revolutionized global cinema networks." },
-                { word: "director", chinese: "導演", cat: "Film and Television", sent: "The _____ has reached a new peak in his career by winning an award at an international film festival." },
-                
-                // Q7
-                { word: "Disney", chinese: "迪士尼", cat: "Film and Television", sent: "With _____ having managed to revive the Star Wars franchise, some producers began to explore other options." },
-                { word: "episode", chinese: "(廣播節目的)一集", cat: "Film and Television", sent: "The cliffhanger at the end of the previous _____ left the audience hungry for answers." },
-                { word: "fantasy", chinese: "幻想", cat: "Film and Television", sent: "The literary trilogy provides a rich narrative environment filled with magic, mystery, and epic _____." },
-                { word: "filmgoer", chinese: "電影迷", cat: "Film and Television", sent: "The modern _____ demands immersive special effects and high-quality storytelling logic." },
-                { word: "franchise", chinese: "電影系列", cat: "Film and Television", sent: "The Spider-Man _____ remains one of the most profitable assets in Hollywood history." },
-                { word: "genre", chinese: "(尤指藝術的)風格/類型", cat: "Film and Television", sent: "Many praise it for pioneering new approaches, which redefines the _____." },
-                { word: "Godzilla", chinese: "哥斯拉", cat: "Film and Television", sent: "The cinematic battle featuring _____ smashing through modern skyscraper structures was an absolute visual triumph." },
-                { word: "Hollywood", chinese: "荷里活", cat: "Film and Television", sent: "His lifelong ambition was to direct a major studio blockbuster backed by elite _____ investors." },
-                { word: "instalment", chinese: "(分期連載的)一節", cat: "Film and Television", sent: "The latest _____ of the superhero series broke all global box office tracking milestones." },
-                { word: "latest", chinese: "最新的", cat: "Film and Television", sent: "The author's _____ work, titled Incredible Me, received a high rating and proved to be a real money-spinner." },
-                
-                // Q8
-                { word: "Marvel", chinese: "漫威", cat: "Film and Television", sent: "The extensive cinematic universe established by _____ features highly cross-connected character storylines." },
-                { word: "musical", chinese: "音樂劇", cat: "Film and Television", sent: "The high school drama club chose to stage a fast-paced _____ filled with pop music hits." },
-                { word: "mystery", chinese: "疑案作品", cat: "Film and Television", sent: "The clever script combines element structures of a classic detective _____ with a romantic comedy." },
-                { word: "plot", chinese: "情節", cat: "Film and Television", sent: "The screenwriters managed to create a gripping _____ which is well developed from beginning to end." },
-                { word: "production", chinese: "製作/生產", cat: "Film and Television", sent: "The studio spent millions on the overall _____ design to simulate an authentic historical context." },
+
+                // Quiz 5 Words (41-50)
+                { word: "Alien", chinese: "異形(科幻恐怖片系列)", cat: "Film and Television", sent: "The classic sci-fi masterpiece _____ terrified filmgoers with its intense suspense and groundbreaking visuals." },
+                { word: "animation", chinese: "動畫", cat: "Film and Television", sent: "Advanced computer graphics technology has revolutionized the field of 3D movie _____." },
+                { word: "animator", chinese: "動畫師", cat: "Film and Television", sent: "The creative _____ spent months drawing the intricate character designs for the anime series." },
+                { word: "anime", chinese: "日本動畫", cat: "Film and Television", sent: "Japanese _____ has built a massive global franchise with millions of dedicated cinephiles." },
+                { word: "attendance", chinese: "出席人數", cat: "Film and Television", sent: "Cinema houses reported a record-breaking drop in weekend _____ due to the rise of streaming platforms." },
+                { word: "audience", chinese: "觀眾", cat: "Film and Television", sent: "The captivating storyline managed to keep the entire theatre _____ on the edge of their seats." },
+                { word: "beauty contest", chinese: "選美比賽", cat: "Film and Television", sent: "Television networks often experience high ratings when broadcasting a live national _____." },
+                { word: "binge-watch", chinese: "持續地追看影集", cat: "Film and Television", sent: "Many teenagers prefer to _____ an entire television series over a single weekend." },
+                { word: "blockbuster", chinese: "暢銷巨著/流行大片", cat: "Film and Television", sent: "The new superhero film is expected to become the highest-grossing summer _____ in history." },
+                { word: "box office", chinese: "票房", cat: "Film and Television", sent: "Despite negative reviews from critics, the movie turned out to be a massive _____ hit." },
+
+                // Quiz 6 Words (51-60)
+                { word: "cartoon", chinese: "卡通", cat: "Film and Television", sent: "Children enjoy watching morning _____ featuring talking animals and hilarious comedy." },
+                { word: "CGI", chinese: "電腦圖形影像處理", cat: "Film and Television", sent: "The studio used advanced _____ to replicate realistic prehistoric dinosaurs for the science fiction film." },
+                { word: "characterization", chinese: "角色刻畫/人物塑造", cat: "Film and Television", sent: "The director's deep _____ made even the minor villain appear sympathetic to the audience." },
+                { word: "cinema", chinese: "電影院", cat: "Film and Television", sent: "Watching a classic widescreen masterpiece inside a traditional _____ offers a superior experience." },
+                { word: "cinephile", chinese: "電影狂熱者", cat: "Film and Television", sent: "As an absolute _____, John goes to the theatre multiple times a week and tracks every director." },
+                { word: "classic", chinese: "經典", cat: "Film and Television", sent: "The 1990 romantic comedy has become a timeless _____ that television channels replay every year." },
+                { word: "cliffhanger", chinese: "懸念式結尾", cat: "Film and Television", sent: "The season finale ended with a major _____, leaving viewers hungry for the next instalment." },
+                { word: "crossover", chinese: "跨界作品", cat: "Film and Television", sent: "Fans were ecstatic when the two superhero universes met in an ultimate comic book _____." },
+                { word: "digital", chinese: "數位的", cat: "Film and Television", sent: "The transition from physical film to _____ formats has greatly reduced production costs for indie studios." },
+                { word: "director", chinese: "導演", cat: "Film and Television", sent: "The creative _____ worked closely with the screenwriter to perfect the movie's complex plot." },
+
+                // Quiz 7 Words (61-70)
+                { word: "Disney", chinese: "迪士尼", cat: "Film and Television", sent: "With _____ having managed to revive the Star Wars franchise, some producers began to explore other classical film series." },
+                { word: "episode", chinese: "(廣播節目的)一集", cat: "Film and Television", sent: "The latest _____ of the reality show reached an unprecedented peak in viewership ratings." },
+                { word: "fantasy", chinese: "幻想", cat: "Film and Television", sent: "The trilogy creates a magnificent _____ world filled with mythical creatures and magical landscapes." },
+                { word: "filmgoer", chinese: "電影迷", cat: "Film and Television", sent: "The long-awaited sequel drew thousands of excited _____ to the midnight premiere." },
+                { word: "franchise", chinese: "電影系列", cat: "Film and Television", sent: "The action movie _____ has released its tenth instalment, grossing billions of dollars worldwide." },
+                { word: "genre", chinese: "(尤指藝術的)風格/類型", cat: "Film and Television", sent: "The verdict on the film from critics is positive, praising it for pioneering new approaches which redefine the _____." },
+                { word: "Godzilla", chinese: "哥斯拉", cat: "Film and Television", sent: "The iconic monster _____ returned to the big screen in a spectacular widescreen blockbuster." },
+                { word: "Hollywood", chinese: "荷里活", cat: "Film and Television", sent: "Many aspiring screenwriters move to _____ in hopes of making it big in the entertainment industry." },
+                { word: "instalment", chinese: "(分期連載的)一節", cat: "Film and Television", sent: "Fans queued overnight outside the bookstore to buy the latest _____ of the mystery series." },
+                { word: "latest", chinese: "最新的", cat: "Film and Television", sent: "Have you listened to the _____ episode of the Star Time music podcast yet?" },
+
+                // Quiz 8 Words (71-80)
+                { word: "Marvel", chinese: "漫威", cat: "Film and Television", sent: "The _____ cinematic universe features interconnected storylines with a massive cast of superheroes." },
+                { word: "musical", chinese: "音樂劇", cat: "Film and Television", sent: "The high school drama club is preparing an electrifying performance of a popular Broadway _____." },
+                { word: "mystery", chinese: "疑案作品", cat: "Film and Television", sent: "The gripping _____ kept the audience guessing the true identity of the villain until the final scene." },
+                { word: "plot", chinese: "情節", cat: "Film and Television", sent: "A gripping _____ with unexpected twists is essential for any successful thriller movie." },
+                { word: "production", chinese: "製作/生產", cat: "Film and Television", sent: "The film studio invested millions in the high-tech _____ of its upcoming sci-fi blockbuster." },
                 { word: "reality show", chinese: "真人秀", cat: "Film and Television", sent: "_____ are intriguing as viewers often see themselves in the participants in real-life situations." },
-                { word: "replicate", chinese: "複製", cat: "Film and Television", sent: "It is exceptionally difficult to _____ the pure magic and aesthetic genius of a classic masterpiece." },
-                { word: "retelling", chinese: "複述", cat: "Film and Television", sent: "The animated film offers a beautifully light-hearted _____ of a traditional European fairy tale." },
-                { word: "romantic comedy", chinese: "浪漫喜劇", cat: "Film and Television", sent: "The two actors displayed excellent chemistry when they starred in the seasonal hit _____." },
-                { word: "running time", chinese: "放映時間", cat: "Film and Television", sent: "With a total _____ of over three hours, the epic western tested the patience of the audience." },
-                
-                // Q9
-                { word: "science fiction", chinese: "科學幻想", cat: "Film and Television", sent: "Advanced CGI technologies allow directors to create highly believable _____ futuristic cities." },
-                { word: "screenwriter", chinese: "編劇", cat: "Film and Television", sent: "The talented _____ spent months optimizing the dialogue structure to make the characters feel genuine." },
-                { word: "sequel", chinese: "續集", cat: "Film and Television", sent: "The studio fast-tracked production on a _____ after the first instalment generated immense profit." },
-                { word: "series", chinese: "系列", cat: "Film and Television", sent: "The company decided not to produce another episode of the Y-Men _____ as it was deemed not profitable enough." },
-                { word: "special effects", chinese: "特技效果", cat: "Film and Television", sent: "The filmmaker relies on historical practical tricks rather than digital _____ to generate realism." },
-                { word: "Spider-Man", chinese: "蜘蛛俠", cat: "Film and Television", sent: "The iconic character of _____ balances regular teenage adolescent struggles with fighting crime." },
-                { word: "storyline", chinese: "故事情節", cat: "Film and Television", sent: "Critics criticized the action blockbuster because its underlying _____ was completely clichéd." },
-                { word: "streaming service", chinese: "串流服務", cat: "Film and Television", sent: "A recent survey revealed an increasing prevalence of _____ such as Netflix, Disney+ and Spotify." },
-                { word: "studio", chinese: "製作公司", cat: "Film and Television", sent: "His next step is to collaborate with major Hollywood _____ such as Disney to further expand his market." },
-                { word: "Studio Ghibli", chinese: "吉卜力工作室", cat: "Film and Television", sent: "The distinctive hand-drawn art style of _____ makes their animation projects instantly recognizable." },
-                
-                // Q10
+                { word: "replicate", chinese: "複製", cat: "Film and Television", sent: "It is incredibly difficult to _____ the magical aesthetic of Studio Ghibli's hand-drawn animation." },
+                { word: "retelling", chinese: "複述", cat: "Film and Television", sent: "The movie offers a modern _____ of a classic fairy tale, set in contemporary New York." },
+                { word: "romantic comedy", chinese: "浪漫喜劇", cat: "Film and Television", sent: "The two actors displayed wonderful chemistry in the light-hearted _____." },
+                { word: "running time", chinese: "放映時間", cat: "Film and Television", sent: "With a _____ of nearly three hours, the epic historical film required an intermission." },
+
+                // Quiz 9 Words (81-90)
+                { word: "science fiction", chinese: "科學幻想", cat: "Film and Television", sent: "Advanced technology, space travel, and alien life are common elements in _____ literature." },
+                { word: "screenwriter", chinese: "編劇", cat: "Film and Television", sent: "The talented _____ wrote a hilarious script that had the entire audience laughing out loud." },
+                { word: "sequel", chinese: "續集", cat: "Film and Television", sent: "The film ends with a cliffhanger; viewers can only know what happens in its _____ which is to be released next year." },
+                { word: "series", chinese: "系列", cat: "Film and Television", sent: "The streaming service announced a new documentary _____ exploring the history of pop music." },
+                { word: "special effects", chinese: "特技效果", cat: "Film and Television", sent: "The breathtaking visual _____ made the alien spaceship look absolutely real." },
+                { word: "Spider-Man", chinese: "蜘蛛俠", cat: "Film and Television", sent: "The animated _____ movie won an Academy Award for its groundbreaking artistic style." },
+                { word: "storyline", chinese: "故事情節", cat: "Film and Television", sent: "The screenwriters managed to create a gripping _____ which is well developed from beginning to end." },
+                { word: "streaming service", chinese: "串流服務", cat: "Film and Television", sent: "A recent survey revealed an increasing prevalence of _____ such as Netflix, Disney+ and Spotify across America." },
+                { word: "studio", chinese: "製作公司", cat: "Film and Television", sent: "The director's next step is to collaborate with major Hollywood _____ such as Disney to further expand his market." },
+                { word: "Studio Ghibli", chinese: "吉卜力工作室", cat: "Film and Television", sent: "Movies produced by _____ are globally acclaimed for their deep themes and beautiful aesthetics." },
+
+                // Quiz 10 Words (91-100)
                 { word: "subscription", chinese: "訂購", cat: "Film and Television", sent: "To hear our interviews with world-famous rock stars, _____ to our free Star Time podcast." },
-                { word: "superhero", chinese: "超級英雄", cat: "Film and Television", sent: "Modern pop culture is heavily dominated by mainstream _____ movie franchises." },
+                { word: "superhero", chinese: "超級英雄", cat: "Film and Television", sent: "Children look up to the powerful _____ character as a noble role model who fights for justice." },
                 { word: "trend", chinese: "趨勢", cat: "Film and Television", sent: "A sense of nostalgia among millennials has made vintage fashion a _____ again." },
-                { word: "trilogy", chinese: "三部曲", cat: "Film and Television", sent: "The final film in the fantasy _____ wrapped up all outstanding storyline elements perfectly." },
-                { word: "variety", chinese: "多樣化", cat: "Film and Television", sent: "The new streaming service boasts a wide _____ of content genres to attract global consumers." },
-                { word: "villain", chinese: "壞人", cat: "Film and Television", sent: "The actor delivered an electrifying performance as the sinister _____ of the story." },
-                { word: "visual", chinese: "視覺材料", cat: "Film and Television", sent: "The presentation features stunning _____ elements to capture the panel's attention." },
-                { word: "western", chinese: "(描寫美國西部的)西部片", cat: "Film and Television", sent: "The vintage cinematic style was heavily inspired by classic Hollywood _____ film aesthetics." },
-                { word: "widescreen", chinese: "寬螢幕的", cat: "Film and Television", sent: "The director shot the sweeping desert landscape scenes in a spectacular _____ format." },
-                { word: "blend", chinese: "(不同風格的)混合品", cat: "Ideology", sent: "The album offers an innovative _____ of traditional folk melodies and modern pop music." },
-                
-                // Q11
-                { word: "context", chinese: "環境/文章脈絡", cat: "Ideology", sent: "To truly appreciate historical art, you must analyze it within its original cultural _____." },
-                { word: "decluttering", chinese: "清除(不再需要的物品)", cat: "Ideology", sent: "The new lifestyle trend highlights regular home _____ to achieve peace of mind." },
-                { word: "environmentalism", chinese: "環保主義", cat: "Ideology", sent: "The animation narrative contains deep themes of _____ and respect for nature." },
-                { word: "era", chinese: "時代", cat: "Ideology", sent: "The rapid expansion of social media networks marked a brand new _____ of human communication." },
-                { word: "feminist", chinese: "女權主義的", cat: "Ideology", sent: "The script provides a powerful _____ critique of mainstream showbiz characterization structures." },
+                { word: "trilogy", chinese: "三部曲", cat: "Film and Television", sent: "The final instalment of the epic fantasy _____ broke all previous box office records." },
+                { word: "variety", chinese: "多樣化", cat: "Film and Television", sent: "The streaming platform offers a wide _____ of content, ranging from romcoms to documentaries." },
+                { word: "villain", chinese: "壞人", cat: "Film and Television", sent: "A compelling story needs a well-developed _____ whose motivations go beyond simple malice." },
+                { word: "visual", chinese: "視覺材料", cat: "Film and Television", sent: "The film's stunning _____ elements perfectly complemented its enchanting musical soundtrack." },
+                { word: "western", chinese: "(描寫美國西部的)西部片", cat: "Film and Television", sent: "The classic _____ movie featured dramatic horse chases across beautiful desert landscapes." },
+                { word: "widescreen", chinese: "寬螢幕的", cat: "Film and Television", sent: "The cinematic experience is greatly enhanced when projected onto a massive _____ format." },
+                { word: "blend", chinese: "(不同風格的)混合品", cat: "Ideology", sent: "The pop song represents a perfect _____ of traditional folk music and modern electronic beats." },
+
+                // Quiz 11 Words (101-110)
+                { word: "context", chinese: "環境/文章脈絡", cat: "Ideology", sent: "Understanding the historical _____ of a film is crucial for a proper critical evaluation." },
+                { word: "decluttering", chinese: "清除(不再需要的物品)", cat: "Ideology", sent: "The popular home organization show inspired millions of viewers to start _____ their rooms." },
+                { word: "environmentalism", chinese: "環保主義", cat: "Ideology", sent: "The director's films often incorporate strong themes of _____, advocating for nature conservation." },
+                { word: "era", chinese: "時代", cat: "Ideology", sent: "The rise of internet streaming marked the beginning of a brand new _____ for the showbiz industry." },
+                { word: "feminist", chinese: "女權主義的", cat: "Ideology", sent: "The movie was praised by critics for its strong _____ message and independent female characters." },
                 { word: "mainstream", chinese: "主流", cat: "Ideology", sent: "Sadly, it has become _____ and many people have been accustomed to it." },
-                { word: "minimalism", chinese: "極簡主義", cat: "Ideology", sent: "The fashionista's wardrobe choices are heavily influenced by modern architectural _____." },
+                { word: "minimalism", chinese: "極簡主義", cat: "Ideology", sent: "Adopting a lifestyle of _____ can help consumers avoid excessive spending on fast fashion." },
                 { word: "modern", chinese: "現代的", cat: "Ideology", sent: "Consumers in the _____ world likely find items with scarce supply more valuable and desirable." },
-                { word: "realism", chinese: "現實感/真實性/現實主義", cat: "Ideology", sent: "The filmmaker used natural lighting frameworks to inject absolute grit and _____ into the scene." },
-                { word: "K-pop", chinese: "韓國流行音樂", cat: "Music", sent: "The catchy choruses and synchronized dance routines of _____ have captured global popularity." },
-                
-                // Q12
-                { word: "pop music", chinese: "流行音樂", cat: "Music", sent: "Rock legends share how they became obsessed with _____ and how they established their style." },
-                { word: "record", chinese: "唱片", cat: "Music", sent: "The legendary group traveled to Hollywood to lock down their upcoming studio _____ contract." },
-                { word: "acclaim", chinese: "讚揚", cat: "Pop Culture Influence", sent: "The film received widespread critical _____ for its groundbreaking special effects mechanics." },
+                { word: "realism", chinese: "現實感/真實性/現實主義", cat: "Ideology", sent: "The documentary-style filming technique added a sense of gritty _____ to the crime drama." },
+                { word: "K-pop", chinese: "韓國流行音樂", cat: "Music", sent: "The global rise of _____ has turned South Korean singers into massive international icons." },
+
+                // Quiz 12 Words (111-120)
+                { word: "pop music", chinese: "流行音樂", cat: "Music", sent: "Catchy melodies and repetitive beats are common characteristics of mainstream _____." },
+                { word: "record", chinese: "唱片", cat: "Music", sent: "The legendary rock band set a new milestone by selling a million copies of their latest _____." },
+                { word: "acclaim", chinese: "讚揚", cat: "Pop Culture Influence", sent: "The director's latest film adaptation received widespread critical _____ at the festival." },
                 { word: "all the rage", chinese: "風行一時", cat: "Pop Culture Influence", sent: "Moreover, all the scenes are beautifully filmed, which is why it has become _____ recently." },
-                { word: "driving force", chinese: "推動力", cat: "Pop Culture Influence", sent: "The youth's massive enthusiasm remains the primary _____ behind the digital native trend." },
-                { word: "fame", chinese: "名聲", cat: "Pop Culture Influence", sent: "Achieving sudden celebrity _____ can cause emotional turbulence if not managed well." },
-                { word: "forerunner", chinese: "先行者", cat: "Pop Culture Influence", sent: "The early black-and-white animation project was a significant _____ of modern CGI." },
-                { word: "groundbreaking", chinese: "開創性的", cat: "Pop Culture Influence", sent: "The studio's digital integration framework was viewed as a highly _____ industry triumph." },
-                { word: "hit", chinese: "受歡迎/十分暢銷", cat: "Pop Culture Influence", sent: "All her films were major _____ on stage and screen and earned international reputation." },
-                { word: "hot", chinese: "廣受歡迎的", cat: "Pop Culture Influence", sent: "The new subscription model is currently the most _____ discussion topic across showbiz networks." },
-                
-                // Q13
-                { word: "influential", chinese: "具影響力的", cat: "Pop Culture Influence", sent: "The fashion show featured wardrobe designs from the world's most _____ stylish icons." },
-                { word: "magnificent", chinese: "盛大的/宏偉的", cat: "Pop Culture Influence", sent: "The late actress received many awards and nominations for her _____ performances on stage." },
+                { word: "driving force", chinese: "推動力", cat: "Pop Culture Influence", sent: "Nostalgia is often the major _____ behind the sudden revival of vintage clothing trends." },
+                { word: "fame", chinese: "名聲", cat: "Pop Culture Influence", sent: "The young influencer achieved overnight _____ after her creative dance video went viral." },
+                { word: "forerunner", chinese: "先行者", cat: "Pop Culture Influence", sent: "This early black-and-white animation was a critical _____ of modern 3D cartoons." },
+                { word: "groundbreaking", chinese: "開創性的", cat: "Pop Culture Influence", sent: "The laboratory utilized _____ visual technology to revolutionize special effects industry standards." },
+                { word: "hit", chinese: "受歡迎/十分暢銷", cat: "Pop Culture Influence", sent: "All her films were major _____ and earned an international reputation." },
+                { word: "hot", chinese: "廣受歡迎的", cat: "Pop Culture Influence", sent: "The new fashion show outfit quickly became a _____ topic of conversation on social media." },
+
+                // Quiz 13 Words (121-130)
+                { word: "influential", chinese: "具影響力的", cat: "Pop Culture Influence", sent: "The cultural icon remains one of the most _____ figures in the modern showbiz world." },
+                { word: "magnificent", chinese: "盛大的/宏偉的", cat: "Pop Culture Influence", sent: "The late actress received many awards and nominations for her _____ performances on stage and screen." },
                 { word: "notable", chinese: "顯著的/值得注意的", cat: "Pop Culture Influence", sent: "A _____ impact of fast fashion is that millions of tonnes of clothes end up in the landfill." },
                 { word: "peak", chinese: "高峰", cat: "Pop Culture Influence", sent: "The director has reached a new _____ in his career by winning an award at an international film festival." },
-                { word: "pioneer", chinese: "做先鋒/當開拓者/倡導", cat: "Pop Culture Influence", sent: "Many praise it for _____ new approaches, which redefines the entire genre." },
-                { word: "popularity", chinese: "流行/普及", cat: "Pop Culture Influence", sent: "Its _____ has been soaring these days, with fashion icons across the world showcasing their affection." },
-                { word: "prospect", chinese: "前景", cat: "Pop Culture Influence", sent: "The commercial _____ of the streaming service looked bright after securing Disney content keys." },
-                { word: "rating", chinese: "評分", cat: "Pop Culture Influence", sent: "The author's latest work, titled Incredible Me, received a high _____ and proved to be a real money-spinner." },
-                { word: "reputation", chinese: "名聲", cat: "Pop Culture Influence", sent: "Following a series of negative news reports, the company's corporate _____ was heavily damaged." },
-                { word: "revolutionize", chinese: "使...發生巨大的改變", cat: "Pop Culture Influence", sent: "The introduction of streaming services completely managed to _____ how we consume media content." },
-                
-                // Q14 (Remaining Core items + Padding selections)
-                { word: "superior", chinese: "上等的/佔優勢的", cat: "Pop Culture Influence", sent: "The organic fabric options offer a far _____ structural feel compared to fast fashion alternatives." },
-                { word: "triumph", chinese: "偉大勝利", cat: "Pop Culture Influence", sent: "The director's indie project was a magnificent artistic _____ at the film festival." },
+                { word: "pioneer", chinese: "做先鋒/當開拓者/倡導", cat: "Pop Culture Influence", sent: "Many praise it for _____ new approaches, which redefines the genre." },
+                { word: "popularity", chinese: "流行/普及", cat: "Pop Culture Influence", sent: "Its _____ has been soaring these days, with fashion icons across the world showcasing affection." },
+                { word: "prospect", chinese: "前景", cat: "Pop Culture Influence", sent: "The commercial success of the initial episode brightened the financial _____ of the series." },
+                { word: "rating", chinese: "評分", cat: "Pop Culture Influence", sent: "The author's latest work, titled Incredible Me, received a high _____ and proved to be a money-spinner." },
+                { word: "reputation", chinese: "名聲", cat: "Pop Culture Influence", sent: "Building a solid corporate _____ requires consistent quality and honest business models." },
+                { word: "revolutionize", chinese: "使...發生巨大的改變", cat: "Pop Culture Influence", sent: "Advanced digital streaming platforms have come to completely _____ how we watch television." },
+
+                // Quiz 14 Words (131-140)
+                { word: "superior", chinese: "上等的/佔優勢的", cat: "Pop Culture Influence", sent: "The classic theatre experience offers a _____ visual and audio quality compared to mobile devices." },
+                { word: "triumph", chinese: "偉大勝利", cat: "Pop Culture Influence", sent: "Winning the box office championship represents a massive commercial _____ for the indie studio." },
                 { word: "verdict", chinese: "結論/裁決", cat: "Pop Culture Influence", sent: "The _____ on the film from critics and audiences is extremely positive." },
-                { word: "brand new", chinese: "嶄新的", cat: "Reception", sent: "The designer launched a _____ fashion collection featuring clean minimalist lines." },
-                { word: "captivating", chinese: "迷人的", cat: "Reception", sent: "Studio Ghibli is globally acclaimed for producing some of the most _____ anime films." },
-                { word: "clichéd", chinese: "陳腔濫調的", cat: "Reception", sent: "The mystery plot was unfortunately highly _____, making the ending easy to predict." },
-                { word: "critic", chinese: "評論家", cat: "Reception", sent: "The upcoming movie received rave review scores from almost every prominent Hollywood _____." },
-                { word: "electrifying", chinese: "令人興奮的", cat: "Reception", sent: "The rock band delivered an absolutely _____ live music performance on stage." },
+                { word: "brand new", chinese: "嶄新的", cat: "Reception", sent: "The streaming service launched a _____ reality show featuring hidden celebrity contestants." },
+                { word: "captivating", chinese: "迷人的", cat: "Reception", sent: "The _____ storyline managed to keep the audience thoroughly immersed from start to finish." },
+                { word: "clichéd", chinese: "陳腔濫調的", cat: "Reception", sent: "Viewers complained that the romantic comedy's plot was highly predictable and _____." },
+                { word: "critic", chinese: "評論家", cat: "Reception", sent: "Professional film _____ write analytical reviews evaluating the characterization of the actors." },
+                { word: "electrifying", chinese: "令人興奮的", cat: "Reception", sent: "The rock band delivered an _____ live performance that thrilled the stadium audience." },
                 { word: "enthusiasm", chinese: "熱情", cat: "Reception", sent: "To hear our interviews with rock stars in which they share their _____ for music, subscribe to our podcast." },
-                { word: "fast-paced", chinese: "節奏快的", cat: "Reception", sent: "The action thriller featured a highly _____, gripping storyline that kept viewers hooked." },
-                
-                // Q15 to Q20 will automatically consume random fair selections of the 132-word database pool as per design metrics.
-                { word: "gripping", chinese: "引人入勝的", cat: "Reception", sent: "The screenwriters managed to create a _____ plot which is well developed from beginning to end." },
-                { word: "hilarious", chinese: "極可笑的", cat: "Reception", sent: "The animated cartoon featured several _____ scenes that made the entire audience laugh out loud." },
-                { word: "hungry", chinese: "渴望的", cat: "Reception", sent: "The unexpected cliffhanger finale left the show's massive fanbase incredibly _____ for the sequel." },
-                { word: "immerse", chinese: "使...沉浸", cat: "Reception", sent: "A challenge or opportunity of film adaptation is the addition of sound and music to _____ the audience." },
-                { word: "light-hearted", chinese: "心情輕鬆的/愉快的", cat: "Reception", sent: "The romantic comedy is a delightfully _____ movie perfect for stress-free weekend viewing." },
-                { word: "obsessed", chinese: "沉迷的", cat: "Reception", sent: "To hear how they became _____ with rock music, subscribe to our free Star Time podcast." },
-                { word: "perceive", chinese: "察覺/把...看作", cat: "Reception", sent: "Many consumers _____ high price points as a direct indicator of superior product quality." }
+                { word: "fast-paced", chinese: "節奏快的", cat: "Reception", sent: "The action film's _____ chase scenes left the audience feeling thrilled and breathless." }
             ]
         };
 
@@ -575,11 +565,8 @@
                 card.onclick = () => startQuizModule(q);
                 
                 let rangeText = `Vocab Section Quiz ${q}`;
-                if (activeSelectedUnit === 4) {
-                    if (q < 14) rangeText = `Vocab ${((q - 1) * 10) + 1} - ${q * 10}`;
-                    else if (q === 14) rangeText = "Vocab 131 - 132 Matrix Pool";
-                    else rangeText = `Cumulative Review Set ${q}`;
-                }
+                if (q <= 14) rangeText = `Vocab ${((q - 1) * 10) + 1} - ${q * 10}`;
+                else rangeText = `Random Review Set ${q}`;
 
                 card.innerHTML = `
                     <div>
@@ -610,26 +597,15 @@
             if (fullPool.length === 0) return [];
 
             let selectedSlice = [];
-            if (unit === 4) {
-                if (quizNum < 14) {
-                    const startIndex = (quizNum - 1) * 10;
-                    selectedSlice = fullPool.slice(startIndex, startIndex + 10);
-                } else if (quizNum === 14) {
-                    // Pull indices 130 to 131 (final 2 items) and pad out randomly up to 10
-                    selectedSlice = fullPool.slice(130, 132);
-                    let paddingPool = shuffleArray(fullPool.slice(0, 130));
-                    while (selectedSlice.length < 10) {
-                        selectedSlice.push(paddingPool.pop());
-                    }
-                } else {
-                    // Fair random selection from the full list for Quizzes 15-20
-                    selectedSlice = shuffleArray(fullPool).slice(0, 10);
-                }
+            if (quizNum <= 14) {
+                const startIndex = (quizNum - 1) * 10;
+                selectedSlice = fullPool.slice(startIndex, startIndex + 10);
             } else {
-                selectedSlice = fullPool.slice(0, 10);
+                // Fair random draw across the full list for Quizzes 15-20
+                selectedSlice = shuffleArray(fullPool).slice(0, 10);
             }
 
-            // Fallback safety assertion
+            // Fallback safety filter
             while (selectedSlice.length < 10 && fullPool.length > 0) {
                 const randomItem = fullPool[Math.floor(Math.random() * fullPool.length)];
                 if(!selectedSlice.includes(randomItem)) selectedSlice.push(randomItem);
@@ -644,7 +620,7 @@
             activeQuestionsPool = getQuizQuestions(activeSelectedUnit, currentLevel, quizNum);
             
             if (activeQuestionsPool.length === 0) {
-                alert("Selected question set allocation array is unpopulated.");
+                alert("Selected question pool initialization array is unpopulated.");
                 return;
             }
             showScreen('quiz-screen');
@@ -740,7 +716,7 @@
             
             for (let i = 0; i < cleanWord.length; i++) {
                 const slot = document.createElement('div');
-                if ([' ', '.', '/', '—', '-'].includes(cleanWord[i])) {
+                if ([' ', '.', '/', '—', '-', '(', ')'].includes(cleanWord[i])) {
                     slot.className = 'slot space';
                     slot.innerText = cleanWord[i] !== ' ' ? cleanWord[i] : '';
                 } else if (i === 0) {
@@ -758,7 +734,7 @@
                 const slots = container.querySelectorAll('.slot:not(.space)');
                 let userCharIdx = 0;
                 for (let k = 1; k < cleanWord.length; k++) {
-                    if ([' ', '.', '/', '—', '-'].includes(cleanWord[k])) continue;
+                    if ([' ', '.', '/', '—', '-', '(', ')'].includes(cleanWord[k])) continue;
                     const slotNode = slots[userCharIdx + 1]; 
                     if (slotNode) {
                         if (val[userCharIdx]) {
@@ -789,11 +765,11 @@
                 isCorrect = (selectedChoice.toLowerCase().trim() === targetCorrectString.toLowerCase());
             } else if (currentLevel === 'intermediate') {
                 const userVal = inputBox.value.trim().toLowerCase();
-                const remainderCorrect = targetCorrectString.substring(1).toLowerCase().replace(/[\s\.\/—\-]/g, '');
-                isCorrect = (userVal.replace(/[\s\.\/—\-]/g, '') === remainderCorrect);
+                const remainderCorrect = targetCorrectString.substring(1).toLowerCase().replace(/[\s\.\/—\-\(\)]/g, '');
+                isCorrect = (userVal.replace(/[\s\.\/—\-\(\)]/g, '') === remainderCorrect);
             } else if (currentLevel === 'advanced') {
                 const userVal = inputBox.value.trim().toLowerCase();
-                isCorrect = (userVal.replace(/[\s\.\/—\-]/g, '') === targetCorrectString.toLowerCase().replace(/[\s\.\/—\-]/g, ''));
+                isCorrect = (userVal.replace(/[\s\.\/—\-\(\)]/g, '') === targetCorrectString.toLowerCase().replace(/[\s\.\/—\-\(\)]/g, ''));
             }
 
             feedback.classList.add('show');
@@ -881,7 +857,6 @@
 
         function fetchLeaderboardData() {
             const syncStatus = document.getElementById('sync-status');
-            
             document.getElementById('leaderboard-title-text').innerText = `🏆 Unit ${activeSelectedUnit} Live Leaderboard`;
             syncStatus.innerText = "Syncing cloud database...";
 
@@ -902,10 +877,7 @@
             const leaderboardBody = document.getElementById('leaderboard-body');
             leaderboardBody.innerHTML = '';
 
-            // Filter for selected Unit only
             const unitFiltered = recordsList.filter(r => parseInt(r.unit) === activeSelectedUnit);
-
-            // Calculate Cumulative Scores for the entire unit 
             const studentScoresMap = {};
 
             unitFiltered.forEach(rec => {
@@ -926,7 +898,6 @@
                 }
             });
 
-            // Convert map to a sortable array and aggregate cumulative totals
             const rankedArr = Object.values(studentScoresMap).map(student => {
                 let cumulativeTotal = 0;
                 for (let key in student.quizzesTracked) {
@@ -940,7 +911,6 @@
                 };
             });
 
-            // Local fallback injector if working offline
             if (studentProfile.class && !rankedArr.find(s => s.class === studentProfile.class && s.name === studentProfile.name)) {
                 let localCumulative = 0;
                 for (let k = 0; k < localStorage.length; k++) {
@@ -954,7 +924,6 @@
                 }
             }
 
-            // Sort descending
             rankedArr.sort((a, b) => b.totalMarks - a.totalMarks);
 
             if (rankedArr.length === 0) {
@@ -988,7 +957,7 @@
             return copied;
         }
 
-        // --- VISUAL EFFECT FRAMEWORKS ---
+        // --- CONFETTI ENGINE ---
         const canvas = document.getElementById('confetti-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
